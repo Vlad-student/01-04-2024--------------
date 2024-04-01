@@ -24,10 +24,13 @@
 .submenu{
     display: none;
     position: absolute;
-    width: 300px;
+    width: 210px;
     top: 100%;
     list-style: none;
     background-color:white;
+    padding-left: 0;
+    left: -10px;
+    border: 1px solid gray;
 }
 .submenu-item{
     position: relative;
@@ -38,6 +41,7 @@
     color:black;
     text-transform: uppercase;
     padding: 3px;
+    text-decoration: none;
 }
 .submenu-item:hover>.submenu{
     display: block;
@@ -47,4 +51,10 @@
 .submenu-item:hover>.submenu-link{
     background-color: rgb(218, 61, 61);
     color: black;
+}
+.main-menu-item:has(>.submenu)>a::after{
+    content: '\23F7';
+}
+.submenu-item:has(>.submenu)::after{
+    content: '\23F5';
 }
