@@ -1,7 +1,10 @@
 .main-menu{
     list-style: none;
     background-color: black;
-   
+    width: 1000px;
+}
+.main-menu-item:hover>.submenu{
+    display: block;
 }
 .main-menu-item{
     display: inline-block;
@@ -21,12 +24,27 @@
 .submenu{
     display: none;
     position: absolute;
-    width: 100%;
-    top: 30px;
+    width: 300px;
+    top: 100%;
     list-style: none;
     background-color:white;
 }
 .submenu-item{
     position: relative;
+}
+.submenu-link{
+    padding: 5px 9px;
+    text-decoration: capitalize;
     color:black;
+    text-transform: uppercase;
+    padding: 3px;
+}
+.submenu-item:hover>.submenu{
+    display: block;
+    left: 100%;
+    top: 0;
+}
+.submenu-item:hover>.submenu-link{
+    background-color: rgb(218, 61, 61);
+    color: black;
 }
